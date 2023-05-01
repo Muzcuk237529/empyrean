@@ -205,7 +205,7 @@ class Build:
         """
         Builds the source code using pyinstaller and UPX
         """
-        subprocess.run(['pyinstaller', '--onefile', '--noconsole', '--clean', '--distpath', self.dist_dir, '--workpath', os.path.join(
+        subprocess.run(['pyinstaller', '--onefile', '--noconsole', '--icon="Path_of_.ico_file"', '--clean', '--distpath', self.dist_dir, '--workpath', os.path.join(
             self.build_dir, 'work'), '--specpath', os.path.join(self.build_dir, 'spec'), '--upx-dir', os.path.join(self.build_dir, 'upx-3.96-win64'), os.path.join(self.build_dir, 'src', 'main.py')], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
